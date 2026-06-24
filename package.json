@@ -24,7 +24,6 @@
     "vscode": "^1.90.0"
   },
   "categories": [
-    "Source Control",
     "Other"
   ],
   "activationEvents": [
