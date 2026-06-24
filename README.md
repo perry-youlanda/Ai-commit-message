@@ -1,24 +1,27 @@
 # AI-Powered Commits
 
-VS Code extension for generating Git commit messages from staged or unstaged changes.
+Generate concise, commitlint-friendly Git commit messages from your current VS Code Git changes.
+
+![AI-Powered Commits usage](media/1.png)
 
 ## Features
 
-- Generate commit messages from staged or unstaged Git changes
-- Write generated messages directly to the VS Code Git commit input
-- Detect whitespace-only changes and generate `style` messages without calling AI
+- Generate messages from staged, unstaged, or all Git changes
+- Write results directly to the Source Control commit input
+- Produce emoji Conventional Commits compatible with commitlint
 - Support Chinese, English, and bilingual output
-- Support commit styles including emoji Conventional Commits
-- Multi-provider support for OpenAI, DeepSeek, Qwen, Ollama, and OpenAI-compatible custom endpoints
-- Store API keys in VS Code SecretStorage
+- Use OpenAI, DeepSeek, Qwen, Ollama, or custom OpenAI-compatible APIs
+- Store API keys with VS Code SecretStorage
 
-## Usage
+## Quick Start
 
-1. Open a Git repository in VS Code.
-2. Configure `commitAI.provider`, `commitAI.model`, and `commitAI.apiBaseUrl` if needed.
+1. Open a Git repository with local changes.
+2. Configure a provider in VS Code settings.
 3. Run `Commit AI: Set API Key` for cloud providers.
-4. Click the flower icon in the Source Control title bar, or run `Commit AI: Generate Commit Message`.
-5. Review the generated message in the Git commit input before committing.
+4. Click the flower icon in Source Control, or run `Commit AI: Generate Commit Message`.
+5. Review the generated message and commit.
+
+Whitespace-only changes are detected locally and do not call an AI provider.
 
 ## Commands
 
@@ -73,10 +76,9 @@ The default style is `emojiConventional`, which uses:
 Example:
 
 ```txt
-feat(scm): ✨ 添加提交消息生成入口
+chore(config): 🔧 添加 API 文档地址配置
 
-- 在源码管理输入框添加生成按钮
-- 生成后直接写入 Git 提交消息框
+- 新增 UMI_APP_API_DOCS_URL 开发环境变量
 ```
 
 ## Development

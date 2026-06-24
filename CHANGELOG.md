@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+- Added usage guide screenshot and tightened README copy.
+
 ## 0.0.3
 
 - Renamed extension display title to AI-Powered Commits.

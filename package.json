@@ -2,7 +2,7 @@
   "name": "ai-powered-commits-youlanda",
   "displayName": "AI-Powered Commits",
   "description": "Generate Git commit messages from current changes.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "youlanda",
   "icon": "media/flower.png",
   "license": "MIT",
