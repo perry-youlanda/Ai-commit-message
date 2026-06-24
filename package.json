@@ -3,7 +3,7 @@
   "displayName": "AI Commit Message Generator",
   "description": "Generate Git commit messages from current changes.",
   "version": "0.0.1",
-  "publisher": "local",
+  "publisher": "youlanda",
   "license": "MIT",
   "repository": {
     "type": "git",
