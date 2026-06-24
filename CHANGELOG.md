@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3
+
+- Renamed extension display title to AI-Powered Commits.
+
 ## 0.0.2
 
 - Added Marketplace icon.

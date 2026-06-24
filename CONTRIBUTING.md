@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to Commit Message.
+Thanks for contributing to AI-Powered Commits.
 
 ## Development
 
