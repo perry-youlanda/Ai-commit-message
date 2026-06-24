@@ -1,0 +1,155 @@
+{
+  "name": "commit-ai-extension",
+  "displayName": "AI Commit Message Generator",
+  "description": "Generate Git commit messages from current changes.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/perry-youlanda/Ai-commit-message.git"
+  },
+  "bugs": {
+    "url": "https://github.com/perry-youlanda/Ai-commit-message/issues"
+  },
+  "homepage": "https://github.com/perry-youlanda/Ai-commit-message#readme",
+  "keywords": [
+    "git",
+    "commit",
+    "commit-message",
+    "source-control",
+    "ai"
+  ],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Source Control",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:commitAI.generateCommitMessage",
+    "onCommand:commitAI.setApiKey",
+    "onCommand:commitAI.clearApiKey",
+    "onCommand:commitAI.changeLanguage",
+    "onCommand:commitAI.changeStyle"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "commitAI.generateCommitMessage",
+        "title": "Commit AI: Generate Commit Message",
+        "icon": {
+          "light": "media/flower.svg",
+          "dark": "media/flower.svg"
+        }
+      },
+      {
+        "command": "commitAI.setApiKey",
+        "title": "Commit AI: Set API Key"
+      },
+      {
+        "command": "commitAI.clearApiKey",
+        "title": "Commit AI: Clear API Key"
+      },
+      {
+        "command": "commitAI.changeLanguage",
+        "title": "Commit AI: Change Language"
+      },
+      {
+        "command": "commitAI.changeStyle",
+        "title": "Commit AI: Change Style"
+      }
+    ],
+    "menus": {
+      "scm/title": [
+        {
+          "command": "commitAI.generateCommitMessage",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Commit AI",
+      "properties": {
+        "commitAI.language": {
+          "type": "string",
+          "default": "zh-CN",
+          "enum": [
+            "zh-CN",
+            "en-US",
+            "bilingual"
+          ],
+          "description": "Commit message language."
+        },
+        "commitAI.style": {
+          "type": "string",
+          "default": "emojiConventional",
+          "enum": [
+            "simple",
+            "conventional",
+            "detailed",
+            "emojiConventional"
+          ],
+          "description": "Commit message style."
+        },
+        "commitAI.provider": {
+          "type": "string",
+          "default": "openai",
+          "enum": [
+            "openai",
+            "deepseek",
+            "qwen",
+            "ollama",
+            "custom"
+          ],
+          "description": "AI provider."
+        },
+        "commitAI.model": {
+          "type": "string",
+          "default": "gpt-4o-mini",
+          "description": "Model name used by the selected AI provider."
+        },
+        "commitAI.apiBaseUrl": {
+          "type": "string",
+          "default": "",
+          "description": "Optional API base URL. Required for custom providers and useful for Qwen region selection or local Ollama hosts."
+        },
+        "commitAI.maxDiffLength": {
+          "type": "number",
+          "default": 12000,
+          "minimum": 1000,
+          "description": "Maximum Git diff length sent to the model."
+        },
+        "commitAI.diffMode": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "auto",
+            "staged",
+            "unstaged",
+            "all"
+          ],
+          "description": "Git diff reading mode."
+        },
+        "commitAI.showPreview": {
+          "type": "boolean",
+          "default": false,
+          "description": "Preview generated commit messages before writing to the Git commit input."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx --yes @vscode/vsce package",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.4.5"
+  }
+}
