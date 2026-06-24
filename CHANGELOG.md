@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.2
+
+- Added Marketplace icon.
+
 ## 0.0.1
 
 - Initial local development version.

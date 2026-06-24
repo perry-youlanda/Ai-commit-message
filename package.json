@@ -2,8 +2,9 @@
   "name": "commit-ai-extension",
   "displayName": "Commit Message",
   "description": "Generate Git commit messages from current changes.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "youlanda",
+  "icon": "media/flower.png",
   "license": "MIT",
   "repository": {
     "type": "git",
