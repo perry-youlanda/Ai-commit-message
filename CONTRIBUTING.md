@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to AI Commit Message Generator.
+Thanks for contributing to Youlanda AI Commit Message.
 
 ## Development
 
