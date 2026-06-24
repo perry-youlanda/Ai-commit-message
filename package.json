@@ -1,6 +1,6 @@
 {
   "name": "commit-ai-extension",
-  "displayName": "Youlanda AI Commit Message",
+  "displayName": "Commit Message",
   "description": "Generate Git commit messages from current changes.",
   "version": "0.0.1",
   "publisher": "youlanda",

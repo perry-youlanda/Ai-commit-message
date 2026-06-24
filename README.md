@@ -1,4 +1,4 @@
-# Youlanda AI Commit Message
+# Commit Message
 
 VS Code extension for generating Git commit messages from staged or unstaged changes.
 
